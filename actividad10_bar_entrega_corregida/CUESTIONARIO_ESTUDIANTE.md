@@ -262,3 +262,4 @@ En un próximo proyecto revisaría bien las rutas de los archivos, usaría nombr
 ### 5. ¿Cómo se relacionan HTML, CSS y JavaScript dentro de un mismo proyecto web?
 
 HTML, CSS y JavaScript trabajan juntos. HTML crea la estructura de la página, CSS le da el diseño visual y JavaScript permite que la página tenga interacción. Si uno de estos archivos tiene errores o no se conecta bien, el proyecto puede dejar de funcionar correctamente.
+Se agregó una mejora al sistema de reservas del sitio web del bar. La nueva funcionalidad permite seleccionar la hora de la reserva y la zona preferida dentro del establecimiento, incluyendo opciones como terraza, barra, zona VIP e interior. También se actualizaron las validaciones en JavaScript para verificar que todos los campos estén completos antes de confirmar la reserva. Además, se revisó el funcionamiento general del formulario para asegurar que el proyecto funcione correctamente en el navegador.
