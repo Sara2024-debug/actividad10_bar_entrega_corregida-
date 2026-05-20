@@ -20,6 +20,8 @@ form.addEventListener("submit", function (event) {
   const telefono = document.getElementById("telefono").value.trim();
   const personas = Number(document.getElementById("personas").value);
   const fecha = document.getElementById("fecha").value;
+  const hora = document.getElementById("hora").value;
+  const zona = document.getElementById("zona").value;
 
   if (nombre.length < 3) {
     mensaje.textContent = "Escribe un nombre válido.";
@@ -39,13 +41,15 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  if (!fecha) {
-    mensaje.textContent = "Selecciona una fecha para la reserva.";
+  if (!fecha || !hora || !zona) {
+    mensaje.textContent = "Selecciona fecha, hora y zona preferida para la reserva.";
     mensaje.className = "form-message error";
     return;
   }
 
-  mensaje.textContent = `Reserva registrada para ${nombre}. Te contactaremos al ${telefono}.`;
+  mensaje.textContent =
+    `Reserva registrada para ${nombre}. Zona: ${zona}. Hora: ${hora}. Te contactaremos al ${telefono}.`;
+
   mensaje.className = "form-message success";
   form.reset();
 });

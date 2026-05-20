@@ -180,7 +180,8 @@ body {
   gap: 18px;
 }
 .booking-form label { color: var(--text); font-weight: 800; }
-.booking-form input {
+.booking-form input,
+.booking-form select {
   width: 100%;
   margin-top: 8px;
   padding: 15px 16px;
@@ -202,7 +203,6 @@ body {
   .booking { padding: 28px; }
   .featured { transform: none; }
 }
-
 
 .form-message.error {
   color: #ff9a9a;

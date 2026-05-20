@@ -82,7 +82,7 @@
       <div class="section-heading">
         <span class="eyebrow">Reservas</span>
         <h2>Agenda tu visita</h2>
-        <p>El formulario debe validar nombre, teléfono y número de personas.</p>
+        <p>El formulario debe validar nombre, teléfono, número de personas, fecha, hora y zona preferida.</p>
       </div>
       <form id="reservationForm" class="booking-form">
         <label>Nombre completo
@@ -96,6 +96,18 @@
         </label>
         <label>Fecha
           <input id="fecha" type="date" required>
+        </label>
+        <label>Hora
+          <input id="hora" type="time" required>
+        </label>
+        <label>Zona preferida
+          <select id="zona" required>
+            <option value="">Seleccione una zona</option>
+            <option value="terraza">Terraza</option>
+            <option value="barra">Barra</option>
+            <option value="vip">Zona VIP</option>
+            <option value="interior">Interior</option>
+          </select>
         </label>
         <button class="btn primary" type="submit">Confirmar reserva</button>
         <p id="mensajeReserva" class="form-message" role="status"></p>
