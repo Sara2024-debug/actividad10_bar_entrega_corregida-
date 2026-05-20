@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Origen Bar de Autor | Proyecto corregido</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <img class="logo" src="assets/img/logo-origen.svg" alt="Logo Origen Bar de Autor">
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <img class="hero-bg" src="assets/img/hero-bar.svg" alt="Interior ilustrado de un bar elegante">
+      <div class="hero-content">
+        <span class="eyebrow">Medellín · Speakeasy moderno</span>
+        <h1>Origen Bar de Autor</h1>
+        <p>Cocteles con ingredientes locales, tapas creativas y una atmósfera íntima para conversaciones memorables.</p>
+        <button class="btn primary" type="button" onclick="reservarMesa()">Reservar una mesa</button>
+        <a class="btn ghost" href="#carta">Ver carta</a>
+      </div>
+    </section>
+
+    <section id="carta" class="section menu-section">
+      <div class="section-heading">
+        <span class="eyebrow">Carta sugerida</span>
+        <h2>Sabores de la noche</h2>
+        <p>Productos ficticios creados para la actividad académica.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card featured">
+          <img src="assets/img/coctel-aurora.svg" alt="Cóctel Aurora de Café">
+          <div>
+            <h3>Aurora de Café</h3>
+            <p>Cold brew, naranja ahumada, miel de panela y espuma especiada.</p>
+            <strong>$28.000</strong>
+          </div>
+        </article>
+        <article class="menu-card">
+          <img src="assets/img/tabla-tapas.svg" alt="Tabla de tapas Andina">
+          <div>
+            <h3>Tabla Andina</h3>
+            <p>Quesos artesanales, arepitas crocantes, tomates confitados y dip de cilantro.</p>
+            <strong>$42.000</strong>
+          </div>
+        </article>
+        <article class="menu-card">
+          <img src="assets/img/noche-jazz.svg" alt="Bebida sin alcohol Bruma Tropical">
+          <div>
+            <h3>Bruma Tropical</h3>
+            <p>Lulo, hierbabuena, soda artesanal y almíbar de jengibre.</p>
+            <strong>$18.000</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section experience">
+      <div>
+        <span class="eyebrow">Experiencia</span>
+        <h2>Un bar diseñado como proyecto web profesional</h2>
+        <p>Este sitio simula una landing page real para un bar. El estudiante debe diagnosticar errores de estructura, rutas, estilos, responsive design e interactividad.</p>
+      </div>
+      <div class="stats">
+        <div><strong>12</strong><span>cocteles de autor</span></div>
+        <div><strong>3</strong><span>ambientes</span></div>
+        <div><strong>Live</strong><span>jazz viernes</span></div>
+      </div>
+    </section>
+
+    <section id="reservas" class="section booking">
+      <div class="section-heading">
+        <span class="eyebrow">Reservas</span>
+        <h2>Agenda tu visita</h2>
+        <p>El formulario debe validar nombre, teléfono y número de personas.</p>
+      </div>
+      <form id="reservationForm" class="booking-form">
+        <label>Nombre completo
+          <input id="nombre" type="text" placeholder="Ej: Mariana López" required>
+        </label>
+        <label>Teléfono
+          <input id="telefono" type="tel" placeholder="3001234567" required>
+        </label>
+        <label>Personas
+          <input id="personas" type="number" min="1" max="8" value="2" required>
+        </label>
+        <label>Fecha
+          <input id="fecha" type="date" required>
+        </label>
+        <button class="btn primary" type="submit">Confirmar reserva</button>
+        <p id="mensajeReserva" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Origen Bar de Autor. Proyecto académico ficticio.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
