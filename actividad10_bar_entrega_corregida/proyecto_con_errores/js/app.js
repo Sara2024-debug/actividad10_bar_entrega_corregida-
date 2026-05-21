@@ -5,6 +5,18 @@ const nombreBar = "Origen Bar de Autor";
 const year = document.getElementById("year");
 year.textContent = new Date().getFullYear();
 
+const btnModoClaro = document.getElementById("btnModoClaro");
+
+btnModoClaro.addEventListener("click", function () {
+  document.body.classList.toggle("modo-claro");
+
+  if (document.body.classList.contains("modo-claro")) {
+    btnModoClaro.textContent = "Modo oscuro";
+  } else {
+    btnModoClaro.textContent = "Modo claro";
+  }
+});
+
 function reservarMesa() {
   const reservas = document.getElementById("reservas");
   reservas.scrollIntoView({ behavior: "smooth" });

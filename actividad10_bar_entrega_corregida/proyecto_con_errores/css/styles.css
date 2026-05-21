@@ -18,6 +18,17 @@ body {
   background: var(--bg);
 }
 
+body.modo-claro {
+  --bg: #fff8ed;
+  --panel: #ffffff;
+  --text: #1f1710;
+  --muted: #6f6255;
+  --gold: #b7791f;
+  --coral: #d95735;
+  --line: rgba(31, 23, 16, .16);
+  --shadow: 0 18px 50px rgba(31, 23, 16, .12);
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -25,6 +36,10 @@ body {
   background: rgba(13, 15, 20, .84);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
+}
+
+body.modo-claro .site-header {
+  background: rgba(255, 248, 237, .9);
 }
 
 .navbar {
@@ -52,6 +67,20 @@ body {
 }
 .nav-links a:hover { color: var(--gold); }
 
+.theme-toggle {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+body.modo-claro .theme-toggle {
+  background: #ffffff;
+}
+
 .hero {
   min-height: 760px;
   position: relative;
@@ -73,6 +102,11 @@ body {
   inset: 0;
   background: linear-gradient(90deg, rgba(13,15,20,.96), rgba(13,15,20,.45), rgba(13,15,20,.9));
 }
+
+body.modo-claro .hero::after {
+  background: linear-gradient(90deg, rgba(255,248,237,.96), rgba(255,248,237,.55), rgba(255,248,237,.9));
+}
+
 .hero-content {
   position: relative;
   z-index: 1;
@@ -108,7 +142,6 @@ body {
   margin-right: 10px;
 }
 .primary {
-  /* ERROR 09: la variable definida arriba se llama --gold */
   background: linear-gradient(135deg, var(--gold), var(--coral));
   color: #140f0c;
 }
@@ -116,6 +149,10 @@ body {
   color: var(--text);
   border-color: var(--line);
   background: rgba(255,255,255,.08);
+}
+
+body.modo-claro .ghost {
+  background: rgba(31, 23, 16, .05);
 }
 
 .section {
@@ -128,7 +165,6 @@ body {
 .section p { color: var(--muted); line-height: 1.7; }
 
 .menu-grid {
-  /* ERROR 10: display correcto es grid */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
@@ -140,6 +176,11 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow);
 }
+
+body.modo-claro .menu-card {
+  background: #ffffff;
+}
+
 .menu-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
 .menu-card div { padding: 22px; }
 .menu-card h3 { margin: 0 0 8px; font-size: 1.35rem; }
@@ -191,11 +232,16 @@ body {
   color: var(--text);
   outline: none;
 }
+
+body.modo-claro .booking-form input,
+body.modo-claro .booking-form select {
+  background: #fffaf2;
+}
+
 .booking-form button, .form-message { grid-column: 1 / -1; }
 .form-message { min-height: 28px; color: var(--gold); font-weight: 800; }
 .footer { text-align: center; color: var(--muted); padding: 30px; border-top: 1px solid var(--line); }
 
-/* ERROR 11: max-wdith está mal escrito; por eso no funciona en celular */
 @media (max-width: 760px) {
   .navbar { height: auto; padding: 18px 0; flex-direction: column; gap: 18px; }
   .nav-links { flex-wrap: wrap; justify-content: center; gap: 14px; }
@@ -206,6 +252,10 @@ body {
 
 .form-message.error {
   color: #ff9a9a;
+}
+
+body.modo-claro .form-message.error {
+  color: #b42318;
 }
 
 .form-message.success {
